@@ -1,0 +1,14 @@
+services:
+  zenedit_db:
+    image: postgres:14.4-alpine
+    environment:
+      - POSTGRES_USER=jacksonAtAcoustic
+      - POSTGRES_PASSWORD=Unchartered4423!
+      - POSTGRES_DB=zenEdit
+    ports:
+      - "5432:5432"
+    volumes:
+      - zenedit_db:/var/lib/postgresql/data
+volumes:
+  zenedit_db:
+    driver: local
